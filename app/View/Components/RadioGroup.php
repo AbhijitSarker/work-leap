@@ -10,8 +10,9 @@ class RadioGroup extends Component
      */
     public function __construct(
         public string $name,
-        public array $options
-
+        public array $options,
+        public ?bool $allOption = true,
+        public ?string $value = null
         // ['entry' => 'entry', 'senior']
         // 0,        1
         // ['Entry' => 'entry', 'Senior' => 'senior']
