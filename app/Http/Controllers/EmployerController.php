@@ -8,14 +8,15 @@ class EmployerController extends Controller
 {
     public function __construct()
     {
-        $this->authorizeResource(Employer::class);
+        //todo: remove comment
+        // $this->authorizeResource(Employer::class);
     }
 
     public function create()
     {
         return view('employer.create');
     }
-    
+
     public function store(Request $request)
     {
         auth()->user()->employer()->create(

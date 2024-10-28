@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,9 +10,8 @@ class MyJobController extends Controller
      */
     public function index()
     {
-        //
+        return view('my_job.index');
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -21,7 +19,6 @@ class MyJobController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -29,7 +26,6 @@ class MyJobController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      */
@@ -37,7 +33,6 @@ class MyJobController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -45,7 +40,6 @@ class MyJobController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -53,7 +47,6 @@ class MyJobController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      */
