@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Models\Job;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         // todo: remove comment
-        // $this->authorize('viewAny', Job::class);
+        $this->authorize('viewAny', Job::class);
 
         $filters = request()->only(
             'search',
@@ -51,7 +54,7 @@ class JobController extends Controller
     public function show(Job $job)
     {
         // todo: remove comment
-        // $this->authorize('view', $job);
+        $this->authorize('view', $job);
 
         return view(
             'job.show',
