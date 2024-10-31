@@ -1,4 +1,3 @@
-
 <x-layout>
     <x-breadcrumbs :links="['My Jobs' => '#']" class="mb-4" />
         <div class="mb-8 text-right">
@@ -23,6 +22,11 @@
               @empty
                 <div>No applications yet</div>
               @endforelse
+
+              <div class="flex space-x-2">
+                <x-link-button href="{{ route('my-jobs.edit', $job) }}">Edit</x-link-button>
+              </div>
+              
             </div>
           </x-job-card>
         @empty
