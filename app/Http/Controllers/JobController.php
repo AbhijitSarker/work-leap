@@ -12,6 +12,9 @@ class JobController extends Controller
      */
     public function index()
     {
+        // todo: remove comment
+        // $this->authorize('viewAny', Job::class);
+
         $filters = request()->only(
             'search',
             'min_salary',
@@ -47,6 +50,9 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
+        // todo: remove comment
+        // $this->authorize('view', $job);
+
         return view(
             'job.show',
             ['job' => $job->load('employer.jobs')]
